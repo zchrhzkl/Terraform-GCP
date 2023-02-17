@@ -26,36 +26,39 @@ variable "gcp_auth_file" {
 
 # GCP Compute Engine Variables
 
-## GCP Instance Variables
+## Compute Engine Instance Name
 variable "ce_name" {
   type        = string
   description = "Compute Engine Instance Name"
-  default     = "csshield-demo-vm"
+  # default     = "csshield-demo-vm"
 }
 
+## Compute Engine Instance Hostname
 variable "ce_hostname" {
   type        = string
   description = "Compute Engine Instance Hostname"
-  default     = "vm.soc.ip"
+  # default     = "vm.soc.ip"
 }
 
-## GCP Compute Engine Boot Image Variables
+## Compute Engine Boot Image Variables
 variable "ce_bi_size" {
   type        = string
   description = "Compute Engine Boot Instance Size"
 }
 
+## Compute Engine Boot Instance Type
 variable "ce_bi_type" {
   type        = string
   description = "Compute Engine Boot Instance Type"
 }
 
-## GCP Compute Engine Boot Image Variables
+## Compute Engine Instance Network Name
 variable "ce_network_name" {
   type        = string
   description = "Compute Engine Instance Network Name"
 }
 
+## Compute Engine Instance Network Subnet
 variable "ce_network_subnet" {
   type        = string
   description = "Compute Engine Instance Network Subnet"

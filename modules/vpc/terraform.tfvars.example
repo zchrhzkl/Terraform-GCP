@@ -1,0 +1,8 @@
+
+gcp_project = ""
+
+gcp_region = ""
+
+gcp_zone = ""
+
+gcp_auth_file = ""

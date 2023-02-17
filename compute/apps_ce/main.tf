@@ -2,9 +2,9 @@
 
 resource "google_compute_instance" "vm_instance_public" {
   name         = var.ce_name
-  machine_type = "e2-standard-4"
+  machine_type = "f1-micro"
   hostname     = var.ce_hostname
-  tags         = ["ssh","https","cs"]
+  tags         = ["ssh","https","app01"]
   boot_disk {
     initialize_params {
       image = var.rocky_9_x86_64_optimized_gcp_sku
