@@ -1,0 +1,31 @@
+## GCP authentication file
+gcp_project = ""
+
+## GCP Region
+gcp_region = ""
+
+## GCP Zone
+gcp_zone = ""
+
+## GCP Auth File Directory
+
+gcp_auth_file = ""
+
+
+## Compute Engine Instance Name
+ce_name = "[App Name]-01-${terraform.workspace}-ce"
+
+## Compute Engine Instance Hostname
+ce_hostname = ""
+
+## Compute Engine Boot Image Variables
+ce_bi_size = ""
+
+## Compute Engine Boot Instance Type
+ce_bi_type = ""
+
+## Compute Engine Instance Network Name
+ce_network_name = ""
+
+## Compute Engine Instance Network Subnet
+ce_network_subnet = ""
