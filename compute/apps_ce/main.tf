@@ -17,6 +17,8 @@ resource "google_compute_instance" "vm_instance_public" {
   network_interface {
     network       = var.ce_network_name
     subnetwork    = var.ce_network_subnet
-    access_config { }
+    access_config {
+      network_tier = "FIXED_STANDARD"
+    }
   }
 }

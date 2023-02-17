@@ -62,7 +62,7 @@ resource "google_compute_firewall" "vpc-01-allow-icmp" {
 # ================================================== VPC 02 ==================================================
 
 resource "google_compute_network" "vpc-02" {
-  name = "company-app-k8s-vpc-1"
+  name = "${var.company}-app-k8s-vpc-1"
   auto_create_subnetworks = false
   description = "VPC for K8s production"
 }
@@ -132,7 +132,7 @@ resource "google_compute_network" "vpc-03" {
 
 # SUBNET 1
 resource "google_compute_subnetwork" "vpc-03-subnet-1" {
-  name          = "company-app-a-se1-czt-${terraform.workspace}-subnet-1"
+  name          = "${var.company}-app-a-se1-czt-${terraform.workspace}-subnet-1"
   ip_cidr_range = "10.20.10.0/24"
   network       = google_compute_network.vpc-03.id
 }
