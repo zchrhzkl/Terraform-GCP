@@ -63,3 +63,9 @@ variable "ce_network_subnet" {
   type        = string
   description = "Compute Engine Instance Network Subnet"
 }
+
+## Compute Engine Instance SSH Key
+# variable "ssh_key" {
+#   type        = string
+#   description = "Compute Engine Instance SSH Key"
+# }

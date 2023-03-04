@@ -9,14 +9,14 @@ resource "google_compute_network" "vpc-01" {
 
 # SUBNET 1
 resource "google_compute_subnetwork" "vpc-01-subnet-1" {
-  name          = "${var.company}-app-a-se1-app01-${terraform.workspace}-subnet-1"
+  name          = "${var.company}-a-se1-app01-${terraform.workspace}-subnet-1"
   ip_cidr_range = "10.20.1.0/24"
   network       = google_compute_network.vpc-01.id
 }
 
 # SUBNET 2
 resource "google_compute_subnetwork" "vpc-01-subnet-2" {
-  name          = "${var.company}-app-a-se1-app01-${terraform.workspace}-subnet-2"
+  name          = "${var.company}-a-se1-app01-${terraform.workspace}-subnet-2"
   ip_cidr_range = "10.20.2.0/24"
   network       = google_compute_network.vpc-01.id
 }
@@ -62,14 +62,14 @@ resource "google_compute_firewall" "vpc-01-allow-icmp" {
 # ================================================== VPC 02 ==================================================
 
 resource "google_compute_network" "vpc-02" {
-  name = "${var.company}-app-k8s-vpc-1"
+  name = "${var.company}-k8s-vpc-1"
   auto_create_subnetworks = false
   description = "VPC for K8s production"
 }
 
 # SUBNET 1
 resource "google_compute_subnetwork" "vpc-02-subnet-1" {
-  name          = "${var.company}-app-a-se1-k8s-${terraform.workspace}-subnet-1"
+  name          = "${var.company}-a-se1-k8s-${terraform.workspace}-subnet-1"
   ip_cidr_range = "10.10.0.0/16"
   network       = google_compute_network.vpc-02.id
 
@@ -125,14 +125,14 @@ resource "google_compute_firewall" "vpc-02-allow-icmp" {
 # ================================================== VPC 03 ==================================================
 
 resource "google_compute_network" "vpc-03" {
-  name = "${var.company}-app-czt-vpc-1"
+  name = "${var.company}-czt-vpc-1"
   auto_create_subnetworks = false
   description = "VPC for Cloudflare Zero Trust"
 }
 
 # SUBNET 1
 resource "google_compute_subnetwork" "vpc-03-subnet-1" {
-  name          = "${var.company}-app-a-se1-czt-${terraform.workspace}-subnet-1"
+  name          = "${var.company}-a-se1-czt-${terraform.workspace}-subnet-1"
   ip_cidr_range = "10.20.10.0/24"
   network       = google_compute_network.vpc-03.id
 }
