@@ -40,3 +40,6 @@ instances.json
 
 # Ignore Other Folders
 cybersecurity
+
+.terraform.tf*
+.terraform.lock*

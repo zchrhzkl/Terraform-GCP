@@ -37,3 +37,6 @@ terraform.rc
 
 # Ignore GCP Credentials
 instances.json
+
+.terraform.tf*
+.terraform.lock*
